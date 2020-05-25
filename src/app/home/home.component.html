@@ -1,0 +1,96 @@
+<main>
+  <div class="position-relative">
+    <!-- Hero for FREE version -->
+    <section class="section section-lg section-hero section-shaped" >
+      
+      <!-- Background circles -->      
+      <div class="shape shape-style-1 shape-primary">
+        <span class="span-150"></span>
+        <span class="span-50"></span>
+        <span class="span-50"></span>
+        <span class="span-75"></span>
+        <span class="span-100"></span>
+        <span class="span-25"></span>
+        <span class="span-50"></span>
+        <span class="span-100"></span>
+        <span class="span-50"></span>
+        <span class="span-100"></span>
+      </div>
+      <div class="container shape-container d-flex align-items-center py-lg">
+        <div class="col px-0">
+          <div class="row align-items-center justify-content-center">
+            <div class="col-lg-8 text-center">
+              <img src="./assets/img/brand/prary_logo.png" style="width: 200px;" class="img-fluid">
+              <p class="lead text-white">The Community Node is a collective of Hamonauts, who will actively participate in the ecosystem to ensure that we do our part as a community,
+                 to ensure the success of the Harmony Poject.</p>
+              <div class="btn-wrapper mt-5">
+                <a href="https://staking.harmony.one/validators/{{this.validaorAddress}}" target="_blank" class="btn btn-lg btn-white btn-icon mb-3 mb-sm-0">
+                  <span class="btn-inner--icon"><i class="fa fa-users"></i></span>
+                  <span class="btn-inner--text">Delegate Now</span>
+                </a>
+                <a [routerLink]="['/onedelegation']" class="btn btn-lg btn-white btn-icon mb-3 mb-sm-0">
+                  <span class="btn-inner--icon"><i class="fa fa-info"></i></span>
+                  <span class="btn-inner--text">Details</span>
+                </a>
+              </div>
+              <p class="lead text-white">We have created a validator dashboard app, this app will provide latest information about the validator performance and metrics etc.</p>              
+              <div class="btn-wrapper mt-5">                
+                <a href="https://apps.apple.com/us/app/one-validator-dashboard/id1511067261" class="btn btn-lg btn-github btn-icon mb-3 mb-sm-0" target="_blank">
+                  <span class="btn-inner--icon"><i class="fa fa-apple"></i></span>
+                  <span class="btn-inner--text">
+                    <span class="text-white">App Store</span></span>
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.prarysoft.one.validator" class="btn btn-lg btn-github btn-icon mb-3 mb-sm-0" target="_blank">
+                  <span class="btn-inner--icon"><i class="fa fa-android"></i></span>
+                  <span class="btn-inner--text">
+                    <span class="text-white">Play Store</span></span>
+                </a>
+              </div>
+              <div class="mt-7">
+                <small class="text-white font-weight-bold mb-0 mr-2">created by PrArySoft <i class="fa fa-copyright"></i></small>                
+              </div>
+            </div>
+          </div>
+        </div>        
+      </div>
+      <!-- SVG separator -->
+      <div class="separator separator-bottom separator-skew zindex-100">
+        <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+          <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
+        </svg>
+      </div>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="card bg-gradient-secondary shadow">
+              <div class="card-body p-lg-5">
+                <h4 class="mb-1">Generate QR Code</h4>
+                <p class="mt-0">Your can generate a QR code by entering your address below.</p>
+                <div class="form-group mt-5" >
+                  <div class="input-group input-group-alternative">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"></span>
+                    </div>
+                    <input class="form-control" placeholder="Enter your ONE Address" type="text" (focus)="focus=true" (blur)="focus=false" [(ngModel)]="qrcodename">
+                  </div>
+                </div>
+                <div>
+                  <button type="button" class="btn btn-default btn-round btn-block btn-lg" (click)="generateQRCode()">Generate</button>
+                </div>
+                <div class="align-items-center" >
+                  <div style="align-items: center;">
+                    <img src="https://chart.googleapis.com/chart?chs=200x200&cht=qr&chl={{this.qrCodeText}}">
+                  </div>
+                </div>
+                <div class="form-group mt-5" >
+                  <div class="input-group input-group-alternative">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>  
+  </div> 
+</main>
